@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "uLMK244PrSzirkCR8XoOCoIOYpiJdl17MSKQg3+eq+U=",
+  "Source": "PoolTicketManagementAPI",
+  "BasePath": "_content/PoolTicketManagementAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
