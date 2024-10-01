@@ -10,6 +10,7 @@ namespace PoolTicketManagementAPI.Models
     {
         public int UserId { get; set; }
         public int RoleId { get; set; }
+        public DateTime AssignedDate { get; set; } = DateTime.Now;
 
         [ForeignKey("UserId")]
         public User? User { get; set; }

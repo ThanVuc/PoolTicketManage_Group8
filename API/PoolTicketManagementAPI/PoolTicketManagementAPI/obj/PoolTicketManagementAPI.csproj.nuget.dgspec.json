@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\poolticketmanagementapi\\PoolTicketManagementAPI.csproj": {}
+    "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\PoolTicketManagementAPI\\PoolTicketManagementAPI.csproj": {}
   },
   "projects": {
-    "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\poolticketmanagementapi\\PoolTicketManagementAPI.csproj": {
+    "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\PoolTicketManagementAPI\\PoolTicketManagementAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\poolticketmanagementapi\\PoolTicketManagementAPI.csproj",
+        "projectUniqueName": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\PoolTicketManagementAPI\\PoolTicketManagementAPI.csproj",
         "projectName": "PoolTicketManagementAPI",
-        "projectPath": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\poolticketmanagementapi\\PoolTicketManagementAPI.csproj",
+        "projectPath": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\PoolTicketManagementAPI\\PoolTicketManagementAPI.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\poolticketmanagementapi\\obj\\",
+        "outputPath": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\PoolTicketManagementAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

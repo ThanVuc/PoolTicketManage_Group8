@@ -10,6 +10,9 @@ namespace PoolTicketManagementAPI.Models
     {
         public int PoolId { get; set; }
         public int EventId { get; set; }
+        public DateTime StartDate {get; set;}
+        public DateTime EndDate {get; set;}
+
         [ForeignKey("PoolId")]
         public Pool? Pool {get; set;}
         [ForeignKey("EventId")]

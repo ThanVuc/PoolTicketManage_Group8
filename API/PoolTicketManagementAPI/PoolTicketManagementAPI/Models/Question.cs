@@ -13,6 +13,8 @@ namespace PoolTicketManagementAPI.Models
         public string QuestionContent {get; set;} = string.Empty;
         public long View {get; set;}
         public bool IsFAQ {get; set;}
+        public DateTime CreatedDate { get; set; }
+        public string Category { get; set; } = string.Empty;
         public int UserId {get; set;}
         [ForeignKey("UserId")]
         public User? User {get; set;}

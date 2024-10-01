@@ -10,6 +10,10 @@ namespace PoolTicketManagementAPI.Models
     {
         public int BillId {get; set;}
         public string BillName {get; set;} = string.Empty;
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal TotalAmount { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
+        public string PaymentMethod { get; set; } = string.Empty;
         public int UserId {get; set;}
 
         [ForeignKey("UserId")]
