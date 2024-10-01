@@ -135,3 +135,4 @@ D:\A_STORAGE\SecondBrain\KNOWLEDGE\Computer Science\Project Manager\PoolTicketMa
 D:\A_STORAGE\SecondBrain\KNOWLEDGE\Computer Science\Project Manager\PoolTicketManage_Group8\API\PoolTicketManagementAPI\poolticketmanagementapi\obj\Debug\net8.0\PoolTicketManagementAPI.pdb
 D:\A_STORAGE\SecondBrain\KNOWLEDGE\Computer Science\Project Manager\PoolTicketManage_Group8\API\PoolTicketManagementAPI\poolticketmanagementapi\obj\Debug\net8.0\PoolTicketManagementAPI.genruntimeconfig.cache
 D:\A_STORAGE\SecondBrain\KNOWLEDGE\Computer Science\Project Manager\PoolTicketManage_Group8\API\PoolTicketManagementAPI\poolticketmanagementapi\obj\Debug\net8.0\ref\PoolTicketManagementAPI.dll
+D:\A_STORAGE\SecondBrain\KNOWLEDGE\Computer Science\Project Manager\PoolTicketManage_Group8\API\PoolTicketManagementAPI\PoolTicketManagementAPI\bin\Debug\net8.0\Newtonsoft.Json.dll

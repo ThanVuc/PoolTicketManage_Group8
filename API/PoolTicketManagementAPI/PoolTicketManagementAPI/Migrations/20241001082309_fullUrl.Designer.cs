@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PoolTicketManagementAPI.Data;
 
@@ -11,9 +12,11 @@ using PoolTicketManagementAPI.Data;
 namespace PoolTicketManagementAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241001082309_fullUrl")]
+    partial class fullUrl
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -159,19 +162,7 @@ namespace PoolTicketManagementAPI.Migrations
                     b.Property<int>("Capacity")
                         .HasColumnType("int");
 
-                    b.Property<string>("CloseTime")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Location")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("OpenTime")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -179,16 +170,11 @@ namespace PoolTicketManagementAPI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PoolOwnerId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Url")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("PoolId");
-
-                    b.HasIndex("PoolOwnerId");
 
                     b.ToTable("Pools");
 
@@ -197,48 +183,32 @@ namespace PoolTicketManagementAPI.Migrations
                         {
                             PoolId = 1,
                             Capacity = 75000,
-                            CloseTime = "19:00",
-                            Description = "The pool is for children with the clear and cold water",
                             Location = "Dien Bien Phu",
-                            OpenTime = "7:30",
                             PoolName = "Children Pool",
-                            PoolOwnerId = 1,
                             Url = "http://localhost:5051/images/ho-boi-cho-tre-em.jpeg"
                         },
                         new
                         {
                             PoolId = 2,
                             Capacity = 75000,
-                            CloseTime = "19:00",
-                            Description = "The pool is for Family with the clear and cold water",
                             Location = "Ha Huy Tap",
-                            OpenTime = "7:30",
                             PoolName = "Family Pool",
-                            PoolOwnerId = 2,
                             Url = "http://localhost:5051/images/hoboigiadinh.jpg"
                         },
                         new
                         {
                             PoolId = 3,
                             Capacity = 75000,
-                            CloseTime = "19:00",
-                            Description = "The Waterfall pool is the natural pool, it is very clear and the atmosphere is so fresh",
                             Location = "Hoa Cuong 9",
-                            OpenTime = "7:30",
                             PoolName = "WaterFall Pool",
-                            PoolOwnerId = 1,
                             Url = "http://localhost:5051/images/thac-nuoc-trang-tri-ho-boi-11.jpg"
                         },
                         new
                         {
                             PoolId = 4,
                             Capacity = 75000,
-                            CloseTime = "19:00",
-                            Description = "The pool has the artifical wave as the beach but the waves is so lighlier than the beach",
                             Location = "Ha Huy Tap",
-                            OpenTime = "7:30",
                             PoolName = "Artificial Wave Pool",
-                            PoolOwnerId = 2,
                             Url = "http://localhost:5051/images/songnhantao.jpg"
                         });
                 });
@@ -311,10 +281,6 @@ namespace PoolTicketManagementAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TicketId"));
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("PoolId")
                         .HasColumnType("int");
 
@@ -345,46 +311,42 @@ namespace PoolTicketManagementAPI.Migrations
                         new
                         {
                             TicketId = 1,
-                            Description = "Trãi nghiệm hồ bơi trong lành và mát mẽ",
                             PoolId = 1,
                             Price = 99999m,
                             TicketName = "Children Pool Ticket",
                             Url = "http://localhost:5051/images/ho-boi-cho-tre-em.jpeg",
-                            ValidFrom = new DateTime(2024, 10, 1, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(248),
-                            ValidUntil = new DateTime(2024, 10, 9, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(265)
+                            ValidFrom = new DateTime(2024, 10, 1, 15, 23, 8, 592, DateTimeKind.Local).AddTicks(1584),
+                            ValidUntil = new DateTime(2024, 10, 9, 15, 23, 8, 592, DateTimeKind.Local).AddTicks(1601)
                         },
                         new
                         {
                             TicketId = 2,
-                            Description = "Trãi nghiệm hồ bơi trong lành và mát mẽ",
                             PoolId = 2,
                             Price = 99999m,
                             TicketName = "Family Pool",
                             Url = "http://localhost:5051/images/hoboigiadinh.jpg",
-                            ValidFrom = new DateTime(2024, 10, 1, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(276),
-                            ValidUntil = new DateTime(2024, 10, 9, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(276)
+                            ValidFrom = new DateTime(2024, 10, 1, 15, 23, 8, 592, DateTimeKind.Local).AddTicks(1615),
+                            ValidUntil = new DateTime(2024, 10, 9, 15, 23, 8, 592, DateTimeKind.Local).AddTicks(1616)
                         },
                         new
                         {
                             TicketId = 3,
-                            Description = "Trãi nghiệm hồ bơi trong lành và mát mẽ",
                             PoolId = 3,
                             Price = 99999m,
                             TicketName = "Waterfall Pool Ticket",
                             Url = "http://localhost:5051/images/thac-nuoc-trang-tri-ho-boi-11.jpg",
-                            ValidFrom = new DateTime(2024, 10, 1, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(279),
-                            ValidUntil = new DateTime(2024, 10, 9, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(279)
+                            ValidFrom = new DateTime(2024, 10, 1, 15, 23, 8, 592, DateTimeKind.Local).AddTicks(1618),
+                            ValidUntil = new DateTime(2024, 10, 9, 15, 23, 8, 592, DateTimeKind.Local).AddTicks(1619)
                         },
                         new
                         {
                             TicketId = 4,
-                            Description = "Trãi nghiệm hồ bơi trong lành và mát mẽ",
                             PoolId = 4,
                             Price = 99999m,
                             TicketName = "Artifical Wave Pool Ticket",
                             Url = "http://localhost:5051/images/songnhantao.jpg",
-                            ValidFrom = new DateTime(2024, 10, 1, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(282),
-                            ValidUntil = new DateTime(2024, 10, 9, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(282)
+                            ValidFrom = new DateTime(2024, 10, 1, 15, 23, 8, 592, DateTimeKind.Local).AddTicks(1621),
+                            ValidUntil = new DateTime(2024, 10, 9, 15, 23, 8, 592, DateTimeKind.Local).AddTicks(1622)
                         });
                 });
 
@@ -419,26 +381,6 @@ namespace PoolTicketManagementAPI.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = 1,
-                            CreatedDate = "22/12/2004",
-                            Email = "User1@gmail.com",
-                            Password = "123",
-                            PhoneNumber = "0000005",
-                            UserName = "User 1"
-                        },
-                        new
-                        {
-                            UserId = 2,
-                            CreatedDate = "10/10/2004",
-                            Email = "User2@gmail.com",
-                            Password = "123",
-                            PhoneNumber = "0002305",
-                            UserName = "User 2"
-                        });
                 });
 
             modelBuilder.Entity("PoolTicketManagementAPI.Models.UserRole", b =>
@@ -462,7 +404,7 @@ namespace PoolTicketManagementAPI.Migrations
             modelBuilder.Entity("PoolTicketManagementAPI.Models.Bill", b =>
                 {
                     b.HasOne("PoolTicketManagementAPI.Models.User", "User")
-                        .WithMany("Bills")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -473,7 +415,7 @@ namespace PoolTicketManagementAPI.Migrations
             modelBuilder.Entity("PoolTicketManagementAPI.Models.BusTicket", b =>
                 {
                     b.HasOne("PoolTicketManagementAPI.Models.Pool", "Pool")
-                        .WithMany("BusTickets")
+                        .WithMany()
                         .HasForeignKey("PoolId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -484,13 +426,13 @@ namespace PoolTicketManagementAPI.Migrations
             modelBuilder.Entity("PoolTicketManagementAPI.Models.CartItem", b =>
                 {
                     b.HasOne("PoolTicketManagementAPI.Models.Ticket", "Ticket")
-                        .WithMany("CartItems")
+                        .WithMany()
                         .HasForeignKey("TicketId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("PoolTicketManagementAPI.Models.User", "User")
-                        .WithMany("CartItems")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -503,13 +445,13 @@ namespace PoolTicketManagementAPI.Migrations
             modelBuilder.Entity("PoolTicketManagementAPI.Models.EventOfPool", b =>
                 {
                     b.HasOne("PoolTicketManagementAPI.Models.Event", "Event")
-                        .WithMany("EventOfPools")
+                        .WithMany()
                         .HasForeignKey("EventId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("PoolTicketManagementAPI.Models.Pool", "Pool")
-                        .WithMany("EventOfPools")
+                        .WithMany()
                         .HasForeignKey("PoolId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -519,21 +461,10 @@ namespace PoolTicketManagementAPI.Migrations
                     b.Navigation("Pool");
                 });
 
-            modelBuilder.Entity("PoolTicketManagementAPI.Models.Pool", b =>
-                {
-                    b.HasOne("PoolTicketManagementAPI.Models.User", "PoolOwner")
-                        .WithMany("Pools")
-                        .HasForeignKey("PoolOwnerId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("PoolOwner");
-                });
-
             modelBuilder.Entity("PoolTicketManagementAPI.Models.Question", b =>
                 {
                     b.HasOne("PoolTicketManagementAPI.Models.User", "User")
-                        .WithMany("Questions")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -544,7 +475,7 @@ namespace PoolTicketManagementAPI.Migrations
             modelBuilder.Entity("PoolTicketManagementAPI.Models.Ticket", b =>
                 {
                     b.HasOne("PoolTicketManagementAPI.Models.Pool", "Pool")
-                        .WithMany("Tickets")
+                        .WithMany()
                         .HasForeignKey("PoolId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -555,13 +486,13 @@ namespace PoolTicketManagementAPI.Migrations
             modelBuilder.Entity("PoolTicketManagementAPI.Models.UserRole", b =>
                 {
                     b.HasOne("PoolTicketManagementAPI.Models.Role", "Role")
-                        .WithMany("UserRoles")
+                        .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("PoolTicketManagementAPI.Models.User", "User")
-                        .WithMany("UserRoles")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -569,43 +500,6 @@ namespace PoolTicketManagementAPI.Migrations
                     b.Navigation("Role");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("PoolTicketManagementAPI.Models.Event", b =>
-                {
-                    b.Navigation("EventOfPools");
-                });
-
-            modelBuilder.Entity("PoolTicketManagementAPI.Models.Pool", b =>
-                {
-                    b.Navigation("BusTickets");
-
-                    b.Navigation("EventOfPools");
-
-                    b.Navigation("Tickets");
-                });
-
-            modelBuilder.Entity("PoolTicketManagementAPI.Models.Role", b =>
-                {
-                    b.Navigation("UserRoles");
-                });
-
-            modelBuilder.Entity("PoolTicketManagementAPI.Models.Ticket", b =>
-                {
-                    b.Navigation("CartItems");
-                });
-
-            modelBuilder.Entity("PoolTicketManagementAPI.Models.User", b =>
-                {
-                    b.Navigation("Bills");
-
-                    b.Navigation("CartItems");
-
-                    b.Navigation("Pools");
-
-                    b.Navigation("Questions");
-
-                    b.Navigation("UserRoles");
                 });
 #pragma warning restore 612, 618
         }

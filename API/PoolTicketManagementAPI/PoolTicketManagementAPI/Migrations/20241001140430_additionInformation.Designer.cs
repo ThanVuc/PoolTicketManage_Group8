@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PoolTicketManagementAPI.Data;
 
@@ -11,9 +12,11 @@ using PoolTicketManagementAPI.Data;
 namespace PoolTicketManagementAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241001140430_additionInformation")]
+    partial class additionInformation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -350,8 +353,8 @@ namespace PoolTicketManagementAPI.Migrations
                             Price = 99999m,
                             TicketName = "Children Pool Ticket",
                             Url = "http://localhost:5051/images/ho-boi-cho-tre-em.jpeg",
-                            ValidFrom = new DateTime(2024, 10, 1, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(248),
-                            ValidUntil = new DateTime(2024, 10, 9, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(265)
+                            ValidFrom = new DateTime(2024, 10, 1, 21, 4, 28, 876, DateTimeKind.Local).AddTicks(5312),
+                            ValidUntil = new DateTime(2024, 10, 9, 21, 4, 28, 876, DateTimeKind.Local).AddTicks(5328)
                         },
                         new
                         {
@@ -361,8 +364,8 @@ namespace PoolTicketManagementAPI.Migrations
                             Price = 99999m,
                             TicketName = "Family Pool",
                             Url = "http://localhost:5051/images/hoboigiadinh.jpg",
-                            ValidFrom = new DateTime(2024, 10, 1, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(276),
-                            ValidUntil = new DateTime(2024, 10, 9, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(276)
+                            ValidFrom = new DateTime(2024, 10, 1, 21, 4, 28, 876, DateTimeKind.Local).AddTicks(5338),
+                            ValidUntil = new DateTime(2024, 10, 9, 21, 4, 28, 876, DateTimeKind.Local).AddTicks(5339)
                         },
                         new
                         {
@@ -372,8 +375,8 @@ namespace PoolTicketManagementAPI.Migrations
                             Price = 99999m,
                             TicketName = "Waterfall Pool Ticket",
                             Url = "http://localhost:5051/images/thac-nuoc-trang-tri-ho-boi-11.jpg",
-                            ValidFrom = new DateTime(2024, 10, 1, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(279),
-                            ValidUntil = new DateTime(2024, 10, 9, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(279)
+                            ValidFrom = new DateTime(2024, 10, 1, 21, 4, 28, 876, DateTimeKind.Local).AddTicks(5341),
+                            ValidUntil = new DateTime(2024, 10, 9, 21, 4, 28, 876, DateTimeKind.Local).AddTicks(5342)
                         },
                         new
                         {
@@ -383,8 +386,8 @@ namespace PoolTicketManagementAPI.Migrations
                             Price = 99999m,
                             TicketName = "Artifical Wave Pool Ticket",
                             Url = "http://localhost:5051/images/songnhantao.jpg",
-                            ValidFrom = new DateTime(2024, 10, 1, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(282),
-                            ValidUntil = new DateTime(2024, 10, 9, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(282)
+                            ValidFrom = new DateTime(2024, 10, 1, 21, 4, 28, 876, DateTimeKind.Local).AddTicks(5345),
+                            ValidUntil = new DateTime(2024, 10, 9, 21, 4, 28, 876, DateTimeKind.Local).AddTicks(5345)
                         });
                 });
 

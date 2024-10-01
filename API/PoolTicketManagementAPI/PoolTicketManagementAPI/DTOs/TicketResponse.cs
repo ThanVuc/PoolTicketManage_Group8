@@ -9,6 +9,7 @@ namespace PoolTicketManagementAPI.DTOs
     {
         public int TicketId { get; set; }
         public string TicketName { get; set; } = string.Empty;
+        public string Description {get; set;} = string.Empty;
         public decimal Price { get; set; }
         public DateTime ValidFrom { get; set;}
         public DateTime ValidUntil {get; set;}
