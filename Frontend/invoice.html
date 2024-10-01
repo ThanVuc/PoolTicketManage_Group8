@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hóa Đơn - Hồ Bơi Đà Nẵng</title>
+    <link rel="stylesheet" href="stylec.css">
+    <script>
+        function displayInvoice() {
+            const ticketName = localStorage.getItem("ticketName");
+            const date = localStorage.getItem("date");
+            const numberOfTickets = localStorage.getItem("numberOfTickets");
+            const paymentMethod = localStorage.getItem("paymentMethod");
+            const totalPrice = localStorage.getItem("totalPrice");
+
+            const ticketType = ticketName === "adult" ? "Vé người lớn" : "Vé trẻ em";
+
+            document.getElementById("invoiceContent").innerHTML = `
+                <h2>Hóa Đơn Đặt Vé</h2>
+                <p><strong>Loại vé:</strong> ${ticketType}</p>
+                <p><strong>Ngày đặt:</strong> ${date}</p>
+                <p><strong>Số lượng vé:</strong> ${numberOfTickets}</p>
+                <p><strong>Phương thức thanh toán:</strong> ${paymentMethod}</p>
+                <p><strong>Tổng tiền:</strong> ${totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')} VND</p>
+            `;
+        }
+    </script>
+</head>
+<body onload="displayInvoice()">
+    <header>
+        <div class="contact-info">
+            <p>Số điện thoại: 012932423 | Email: hoboidanang@gmail.com</p>
+        </div>
+        <div class="auth-forms">
+            <form action="/login" method="post" class="login-form">
+                <button type="submit">Đăng nhập</button>
+            </form>
+            <form action="/register" method="post" class="register-form">
+                <button type="submit">Đăng ký</button>
+            </form>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="introduce.html">Giới thiệu</a></li>
+            <li><a href="booking.html">Đặt vé online</a></li>
+            <li><a href="pool.html">Sự kiện hồ bơi</a></li>
+            <li><a href="customer.html">Dịch vụ chăm sóc khách hàng</a></li>
+        </ul>
+    </nav>
+
+    <div class="invoice-container" id="invoiceContent"></div>
+
+    <footer>
+        <p>&copy; 2024 Hồ Bơi Đà Nẵng. All rights reserved.</p>
+    </footer>
+</body>
+</html>

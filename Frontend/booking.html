@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt vé - Hồ Bơi Đà Nẵng</title>
+    <link rel="stylesheet" href="stylec.css">
+    <script>
+        function submitBooking() {
+            const ticketName = document.getElementById("ticketName").value;
+            const date = document.getElementById("date").value;
+            const numberOfTickets = document.getElementById("numberOfTickets").value;
+            const paymentMethod = document.getElementById("paymentMethod").value;
+
+            // Tính tổng tiền
+            const ticketPrice = ticketName === "adult" ? 150000 : 75000;
+            const totalPrice = ticketPrice * numberOfTickets;
+
+            // Lưu thông tin vào localStorage
+            localStorage.setItem("ticketName", ticketName);
+            localStorage.setItem("date", date);
+            localStorage.setItem("numberOfTickets", numberOfTickets);
+            localStorage.setItem("paymentMethod", paymentMethod);
+            localStorage.setItem("totalPrice", totalPrice);
+
+            // Chuyển đến trang hóa đơn
+            window.location.href = "invoice.html";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="contact-info">
+            <p>Số điện thoại: 012932423 | Email: hoboidanang@gmail.com</p>
+        </div>
+        <div class="auth-forms">
+            <div class="auth-forms">
+                <form class="login-form">
+                    <button type="button" onclick="window.location.href='login.html'">Đăng nhập</button>
+                </form>
+                
+                <form class="register-form">
+                    <button type="button" onclick="window.location.href='register.html'">Đăng ký</button>
+                </form>
+                
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="introduce.html">Giới thiệu</a></li>
+            <li><a href="booking.html">Đặt vé online</a></li>
+            <li><a href="pool.html">Sự kiện hồ bơi</a></li>
+            <li><a href="customer.html">Dịch vụ chăm sóc khách hàng</a></li>
+        </ul>
+    </nav>
+
+    <form class="ticket-form" method="POST" action="javascript:void(0);" onsubmit="submitBooking()">
+        <label for="ticketName">Loại vé:</label>
+        <select id="ticketName" name="ticketName" required>
+            <option value="adult">Vé người lớn</option>
+            <option value="child">Vé trẻ em</option>
+        </select>
+
+        <label for="date" >Ngày đặt:</label>
+        <input type="date" id="date" name="date" required class="txt_input">
+
+        <label for="numberOfTickets">Số lượng vé:</label>
+        <input type="number" id="numberOfTickets" name="numberOfTickets" min="1" value="1" required class="txt_input">
+
+        <label for="paymentMethod">Phương thức thanh toán:</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+            <option value="credit-card">Thẻ tín dụng</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank-transfer">Chuyển khoản ngân hàng</option>
+        </select>
+
+        <button type="submit">Đặt vé</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Hồ Bơi Đà Nẵng. All rights reserved.</p>
+    </footer>
+</body>
+</html>
