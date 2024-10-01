@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using PoolTicketManagementAPI.Data;
+using PoolTicketManagementAPI.IRepository;
+using PoolTicketManagementAPI.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
@@ -25,6 +28,10 @@ services.AddDbContext<AppDbContext>(options => {
     options.UseSqlServer(configuration.GetConnectionString("Default"));
 });
 
+// declare repository injection
+services.AddScoped<ITicketRepository, TicketRepository>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -34,6 +41,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseStaticFiles(new StaticFileOptions{
+    RequestPath = "/images",
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "Images")
+    )
+});
 app.UseHttpsRedirection();
 
 app.UseCors("CorsPolicy");

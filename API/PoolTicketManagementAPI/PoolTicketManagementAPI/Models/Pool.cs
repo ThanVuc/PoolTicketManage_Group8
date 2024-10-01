@@ -11,5 +11,6 @@ namespace PoolTicketManagementAPI.Models
         public string PoolName {get; set; } = string.Empty;
         public string Location { get; set; } = string.Empty;
         public int Capacity { get; set; }
+        public string Url {get; set;} = string.Empty;
     }
 }

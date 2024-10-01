@@ -1,22 +1,17 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PoolTicketManagementAPI.Models
+namespace PoolTicketManagementAPI.DTOs
 {
-    public class Ticket
+    public class TicketResponse
     {
         public int TicketId { get; set; }
         public string TicketName { get; set; } = string.Empty;
-        [Column(TypeName = "decimal(18)")]
         public decimal Price { get; set; }
-        public DateTime ValidFrom { get; set; }
+        public DateTime ValidFrom { get; set;}
         public DateTime ValidUntil {get; set;}
         public string Url {get; set;} = string.Empty;
-        public int PoolId {get; set;}
-        [ForeignKey("PoolId")]
-        public Pool? Pool {get; set;}
     }
 }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PoolTicketManagementAPI.Data;
 
@@ -11,9 +12,11 @@ using PoolTicketManagementAPI.Data;
 namespace PoolTicketManagementAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241001042501_Url")]
+    partial class Url
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -174,40 +177,6 @@ namespace PoolTicketManagementAPI.Migrations
                     b.HasKey("PoolId");
 
                     b.ToTable("Pools");
-
-                    b.HasData(
-                        new
-                        {
-                            PoolId = 1,
-                            Capacity = 75000,
-                            Location = "Dien Bien Phu",
-                            PoolName = "Children Pool",
-                            Url = "/images/ho-boi-cho-tre-em.jpeg"
-                        },
-                        new
-                        {
-                            PoolId = 2,
-                            Capacity = 75000,
-                            Location = "Ha Huy Tap",
-                            PoolName = "Family Pool",
-                            Url = "/images/hoboigiadinh.jpg"
-                        },
-                        new
-                        {
-                            PoolId = 3,
-                            Capacity = 75000,
-                            Location = "Hoa Cuong 9",
-                            PoolName = "WaterFall Pool",
-                            Url = "/images/thac-nuoc-trang-tri-ho-boi-11.jpg"
-                        },
-                        new
-                        {
-                            PoolId = 4,
-                            Capacity = 75000,
-                            Location = "Ha Huy Tap",
-                            PoolName = "Artificial Wave Pool",
-                            Url = "/images/songnhantao.jpg"
-                        });
                 });
 
             modelBuilder.Entity("PoolTicketManagementAPI.Models.Question", b =>
@@ -303,48 +272,6 @@ namespace PoolTicketManagementAPI.Migrations
                     b.HasIndex("PoolId");
 
                     b.ToTable("Tickets");
-
-                    b.HasData(
-                        new
-                        {
-                            TicketId = 1,
-                            PoolId = 1,
-                            Price = 99999m,
-                            TicketName = "Children Pool Ticket",
-                            Url = "/images/ho-boi-cho-tre-em.jpeg",
-                            ValidFrom = new DateTime(2024, 10, 1, 12, 22, 22, 517, DateTimeKind.Local).AddTicks(4200),
-                            ValidUntil = new DateTime(2024, 10, 9, 12, 22, 22, 517, DateTimeKind.Local).AddTicks(4217)
-                        },
-                        new
-                        {
-                            TicketId = 2,
-                            PoolId = 2,
-                            Price = 99999m,
-                            TicketName = "Family Pool",
-                            Url = "/images/hoboigiadinh.jpg",
-                            ValidFrom = new DateTime(2024, 10, 1, 12, 22, 22, 517, DateTimeKind.Local).AddTicks(4228),
-                            ValidUntil = new DateTime(2024, 10, 9, 12, 22, 22, 517, DateTimeKind.Local).AddTicks(4229)
-                        },
-                        new
-                        {
-                            TicketId = 3,
-                            PoolId = 3,
-                            Price = 99999m,
-                            TicketName = "Waterfall Pool Ticket",
-                            Url = "/images/thac-nuoc-trang-tri-ho-boi-11.jpg",
-                            ValidFrom = new DateTime(2024, 10, 1, 12, 22, 22, 517, DateTimeKind.Local).AddTicks(4232),
-                            ValidUntil = new DateTime(2024, 10, 9, 12, 22, 22, 517, DateTimeKind.Local).AddTicks(4233)
-                        },
-                        new
-                        {
-                            TicketId = 4,
-                            PoolId = 4,
-                            Price = 99999m,
-                            TicketName = "Artifical Wave Pool Ticket",
-                            Url = "/images/songnhantao.jpg",
-                            ValidFrom = new DateTime(2024, 10, 1, 12, 22, 22, 517, DateTimeKind.Local).AddTicks(4235),
-                            ValidUntil = new DateTime(2024, 10, 9, 12, 22, 22, 517, DateTimeKind.Local).AddTicks(4236)
-                        });
                 });
 
             modelBuilder.Entity("PoolTicketManagementAPI.Models.User", b =>
