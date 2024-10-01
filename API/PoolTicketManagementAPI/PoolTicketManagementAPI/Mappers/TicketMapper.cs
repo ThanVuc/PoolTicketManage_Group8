@@ -13,6 +13,7 @@ namespace PoolTicketManagementAPI.Mappers
             return new TicketResponse(){
                 TicketId = ticketModel.TicketId,
                 TicketName = ticketModel.TicketName,
+                Description = ticketModel.Description,
                 Price = ticketModel.Price,
                 Url = ticketModel.Url,
                 ValidFrom = ticketModel.ValidFrom,

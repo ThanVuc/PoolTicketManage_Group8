@@ -37,35 +37,74 @@ namespace PoolTicketManagementAPI.Data
                 entity.HasKey(c => new {c.EventId, c.PoolId});
             });
 
-            
+            modelBuilder.Entity<User>()
+            .HasMany(u => u.Pools)
+            .WithOne(p => p.PoolOwner)
+            .OnDelete(DeleteBehavior.NoAction);
+
+            List<User> users = new List<User>(){
+                new User(){
+                    UserId = 1,
+                    UserName = "User 1",
+                    Email = "User1@gmail.com",
+                    Password = "123",
+                    CreatedDate = "22/12/2004",
+                    PhoneNumber = "0000005"
+                },
+                new User(){
+                    UserId = 2,
+                    UserName = "User 2",
+                    Email = "User2@gmail.com",
+                    Password = "123",
+                    CreatedDate = "10/10/2004",
+                    PhoneNumber = "0002305"
+                }
+            };
+
             List<Pool> pools = new List<Pool>{
                 new Pool(){
                     PoolId = 1,
                     PoolName = "Children Pool",
                     Capacity = 75000,
                     Location = "Dien Bien Phu",
-                    Url = "/images/ho-boi-cho-tre-em.jpeg"
+                    Url = "http://localhost:5051/images/ho-boi-cho-tre-em.jpeg",
+                    PoolOwnerId = 1,
+                    Description = "The pool is for children with the clear and cold water",
+                    OpenTime = "7:30",
+                    CloseTime = "19:00"
                 },
                 new Pool(){
                     PoolId = 2,
                     PoolName = "Family Pool",
                     Capacity = 75000,
                     Location = "Ha Huy Tap",
-                    Url = "/images/hoboigiadinh.jpg"
+                    Url = "http://localhost:5051/images/hoboigiadinh.jpg",
+                    PoolOwnerId = 2,
+                    Description = "The pool is for Family with the clear and cold water",
+                    OpenTime = "7:30",
+                    CloseTime = "19:00"
                 },
                 new Pool(){
                     PoolId = 3,
                     PoolName = "WaterFall Pool",
                     Capacity = 75000,
                     Location = "Hoa Cuong 9",
-                    Url = "/images/thac-nuoc-trang-tri-ho-boi-11.jpg"
+                    Url = "http://localhost:5051/images/thac-nuoc-trang-tri-ho-boi-11.jpg",
+                    PoolOwnerId = 1,
+                    Description = "The Waterfall pool is the natural pool, it is very clear and the atmosphere is so fresh",
+                    OpenTime = "7:30",
+                    CloseTime = "19:00"
                 },
                 new Pool(){
                     PoolId = 4,
                     PoolName = "Artificial Wave Pool",
                     Capacity = 75000,
                     Location = "Ha Huy Tap",
-                    Url = "/images/songnhantao.jpg"
+                    Url = "http://localhost:5051/images/songnhantao.jpg",
+                    PoolOwnerId = 2,
+                    Description = "The pool has the artifical wave as the beach but the waves is so lighlier than the beach",
+                    OpenTime = "7:30",
+                    CloseTime = "19:00"
                 }
             };
 
@@ -75,40 +114,47 @@ namespace PoolTicketManagementAPI.Data
                 new Ticket(){
                     TicketId = 1,
                     PoolId = 1,
+                    Description = "Trãi nghiệm hồ bơi trong lành và mát mẽ",
                     TicketName = "Children Pool Ticket",
                     Price = 99999,
                     ValidFrom = DateTime.Now,
                     ValidUntil = DateTime.Now.AddDays(8),
-                    Url = "/images/ho-boi-cho-tre-em.jpeg"
+                    Url = "http://localhost:5051/images/ho-boi-cho-tre-em.jpeg"
                 },
                 new Ticket(){
                     TicketId = 2,
                     PoolId = 2,
                     TicketName = "Family Pool",
+                    Description = "Trãi nghiệm hồ bơi trong lành và mát mẽ",
                     Price = 99999,
                     ValidFrom = DateTime.Now,
                     ValidUntil = DateTime.Now.AddDays(8),
-                    Url = "/images/hoboigiadinh.jpg"
+                    Url = "http://localhost:5051/images/hoboigiadinh.jpg"
                 },
                 new Ticket(){
                     TicketId = 3,
                     PoolId = 3,
                     TicketName = "Waterfall Pool Ticket",
+                    Description = "Trãi nghiệm hồ bơi trong lành và mát mẽ",
                     Price = 99999,
                     ValidFrom = DateTime.Now,
                     ValidUntil = DateTime.Now.AddDays(8),
-                    Url = "/images/thac-nuoc-trang-tri-ho-boi-11.jpg"
+                    Url = "http://localhost:5051/images/thac-nuoc-trang-tri-ho-boi-11.jpg"
                 },
                 new Ticket(){
                     TicketId = 4,
                     PoolId = 4,
                     TicketName = "Artifical Wave Pool Ticket",
+                    Description = "Trãi nghiệm hồ bơi trong lành và mát mẽ",
                     Price = 99999,
                     ValidFrom = DateTime.Now,
                     ValidUntil = DateTime.Now.AddDays(8),
-                    Url = "/images/songnhantao.jpg" 
+                    Url = "http://localhost:5051/images/songnhantao.jpg" 
                 }
             };
+
+            modelBuilder.Entity<User>()
+            .HasData(users);
 
             modelBuilder.Entity<Pool>()
             .HasData(pools);

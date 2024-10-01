@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PoolTicketManagementAPI.Data;
 
@@ -11,9 +12,11 @@ using PoolTicketManagementAPI.Data;
 namespace PoolTicketManagementAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241001134909_FixDB")]
+    partial class FixDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -159,19 +162,7 @@ namespace PoolTicketManagementAPI.Migrations
                     b.Property<int>("Capacity")
                         .HasColumnType("int");
 
-                    b.Property<string>("CloseTime")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Location")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("OpenTime")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -197,10 +188,7 @@ namespace PoolTicketManagementAPI.Migrations
                         {
                             PoolId = 1,
                             Capacity = 75000,
-                            CloseTime = "19:00",
-                            Description = "The pool is for children with the clear and cold water",
                             Location = "Dien Bien Phu",
-                            OpenTime = "7:30",
                             PoolName = "Children Pool",
                             PoolOwnerId = 1,
                             Url = "http://localhost:5051/images/ho-boi-cho-tre-em.jpeg"
@@ -209,10 +197,7 @@ namespace PoolTicketManagementAPI.Migrations
                         {
                             PoolId = 2,
                             Capacity = 75000,
-                            CloseTime = "19:00",
-                            Description = "The pool is for Family with the clear and cold water",
                             Location = "Ha Huy Tap",
-                            OpenTime = "7:30",
                             PoolName = "Family Pool",
                             PoolOwnerId = 2,
                             Url = "http://localhost:5051/images/hoboigiadinh.jpg"
@@ -221,10 +206,7 @@ namespace PoolTicketManagementAPI.Migrations
                         {
                             PoolId = 3,
                             Capacity = 75000,
-                            CloseTime = "19:00",
-                            Description = "The Waterfall pool is the natural pool, it is very clear and the atmosphere is so fresh",
                             Location = "Hoa Cuong 9",
-                            OpenTime = "7:30",
                             PoolName = "WaterFall Pool",
                             PoolOwnerId = 1,
                             Url = "http://localhost:5051/images/thac-nuoc-trang-tri-ho-boi-11.jpg"
@@ -233,10 +215,7 @@ namespace PoolTicketManagementAPI.Migrations
                         {
                             PoolId = 4,
                             Capacity = 75000,
-                            CloseTime = "19:00",
-                            Description = "The pool has the artifical wave as the beach but the waves is so lighlier than the beach",
                             Location = "Ha Huy Tap",
-                            OpenTime = "7:30",
                             PoolName = "Artificial Wave Pool",
                             PoolOwnerId = 2,
                             Url = "http://localhost:5051/images/songnhantao.jpg"
@@ -350,8 +329,8 @@ namespace PoolTicketManagementAPI.Migrations
                             Price = 99999m,
                             TicketName = "Children Pool Ticket",
                             Url = "http://localhost:5051/images/ho-boi-cho-tre-em.jpeg",
-                            ValidFrom = new DateTime(2024, 10, 1, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(248),
-                            ValidUntil = new DateTime(2024, 10, 9, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(265)
+                            ValidFrom = new DateTime(2024, 10, 1, 20, 49, 8, 613, DateTimeKind.Local).AddTicks(751),
+                            ValidUntil = new DateTime(2024, 10, 9, 20, 49, 8, 613, DateTimeKind.Local).AddTicks(764)
                         },
                         new
                         {
@@ -361,8 +340,8 @@ namespace PoolTicketManagementAPI.Migrations
                             Price = 99999m,
                             TicketName = "Family Pool",
                             Url = "http://localhost:5051/images/hoboigiadinh.jpg",
-                            ValidFrom = new DateTime(2024, 10, 1, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(276),
-                            ValidUntil = new DateTime(2024, 10, 9, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(276)
+                            ValidFrom = new DateTime(2024, 10, 1, 20, 49, 8, 613, DateTimeKind.Local).AddTicks(773),
+                            ValidUntil = new DateTime(2024, 10, 9, 20, 49, 8, 613, DateTimeKind.Local).AddTicks(774)
                         },
                         new
                         {
@@ -372,8 +351,8 @@ namespace PoolTicketManagementAPI.Migrations
                             Price = 99999m,
                             TicketName = "Waterfall Pool Ticket",
                             Url = "http://localhost:5051/images/thac-nuoc-trang-tri-ho-boi-11.jpg",
-                            ValidFrom = new DateTime(2024, 10, 1, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(279),
-                            ValidUntil = new DateTime(2024, 10, 9, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(279)
+                            ValidFrom = new DateTime(2024, 10, 1, 20, 49, 8, 613, DateTimeKind.Local).AddTicks(777),
+                            ValidUntil = new DateTime(2024, 10, 9, 20, 49, 8, 613, DateTimeKind.Local).AddTicks(777)
                         },
                         new
                         {
@@ -383,8 +362,8 @@ namespace PoolTicketManagementAPI.Migrations
                             Price = 99999m,
                             TicketName = "Artifical Wave Pool Ticket",
                             Url = "http://localhost:5051/images/songnhantao.jpg",
-                            ValidFrom = new DateTime(2024, 10, 1, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(282),
-                            ValidUntil = new DateTime(2024, 10, 9, 21, 11, 36, 614, DateTimeKind.Local).AddTicks(282)
+                            ValidFrom = new DateTime(2024, 10, 1, 20, 49, 8, 613, DateTimeKind.Local).AddTicks(780),
+                            ValidUntil = new DateTime(2024, 10, 9, 20, 49, 8, 613, DateTimeKind.Local).AddTicks(780)
                         });
                 });
 

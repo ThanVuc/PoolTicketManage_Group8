@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PoolTicketManagementAPI.Data;
@@ -28,8 +30,10 @@ namespace PoolTicketManagementAPI.Repository
 
         public async Task<Ticket?> GetTicketById(int id)
         {
-            var ticket = await _context.Tickets.FindAsync(id);
-            
+            var ticket = await _context.Tickets
+            .Include(t => t.Pool)
+            .FirstOrDefaultAsync(t => t.TicketId == id);
+
             if (ticket == null){
                 return null;
             }
