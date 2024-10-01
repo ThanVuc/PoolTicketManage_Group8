@@ -10,6 +10,8 @@ namespace PoolTicketManagementAPI.Models
     {
         public int BusTicketId { get; set; }
         public string? BusTicketName {get; set;}
+        public int SeatNumber { get; set; }
+        public DateTime DepartureTime {get; set;}
         public int PoolId {get; set;}
         [ForeignKey("PoolId")]
         public Pool? Pool {get; set;}

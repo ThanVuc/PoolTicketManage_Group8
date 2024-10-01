@@ -10,6 +10,10 @@ namespace PoolTicketManagementAPI.Models
     {
         public int TicketId { get; set; }
         public string TicketName { get; set; } = string.Empty;
+        [Column(TypeName = "decimal(18)")]
+        public decimal Price { get; set; }
+        public DateTime ValidFrom { get; set; }
+        public DateTime ValidUntil {get; set;}
         public int PoolId {get; set;}
         [ForeignKey("PoolId")]
         public Pool? Pool {get; set;}
