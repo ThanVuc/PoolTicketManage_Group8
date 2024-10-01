@@ -1,0 +1,92 @@
+    <!DOCTYPE html>
+    <html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hồ Bơi Đà Nẵng</title>
+        <link rel="stylesheet" href="stylec.css">
+        <link rel="stylesheet" href="bootstrap-5.3.3/dist/css/bootstrap.min.css">
+        <script src="detail.js"></script>
+
+        <style>
+            .book-ticket{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .book-ticket .btn-book{
+                width: 10%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="contact-info">
+                <p>Số điện thoại: 012932423 | Email: hoboidanang@gmail.com</p>
+            </div>
+            <div class="auth-forms">
+                <form class="login-form">
+                    <button type="button" onclick="window.location.href='login.html'">Đăng nhập</button>
+                </form>
+                
+                <form class="register-form">
+                    <button type="button" onclick="window.location.href='register.html'">Đăng ký</button>
+                </form>
+                
+            </div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="introduce.html">Giới thiệu</a>
+                </li>
+                <li><a href="booking.html">Đặt vé online</a></li>
+                <li><a href="ticket.html">Sự kiện hồ bơi</a></li>
+                <li><a href="customer.html">Dịch vụ chăm sóc khách hàng</a></li>
+            </ul>
+        </nav>
+        
+        <section id="home">
+            <h1></h1>
+            <img class="image" alt="Hồ bơi Trung Sơn">
+        </section>
+
+        <div class="book-ticket" >
+            <button class="btn btn-outline-danger btn-book" onclick="window.location.href='booking.html'">Book Ticket</button>
+        </div>
+
+
+        <section id="introduce">
+            <h2>Introduce</h2>
+            <p>Thông tin về hồ bơi...</p>
+        </section>
+
+        <section id="swimming-pool">
+            <h2>Tắm Hồ Bơi</h2>
+            <p id="open"><strong>Open Time:</strong> 7h30 - 17h00</p>
+            <p id="close"><strong>Close Time:</strong> 17h30</p>
+        </section>
+
+        <section id="booking">
+            <h2>Đặt vé online</h2>
+            <p>Thông tin về dịch vụ đặt vé online...</p>
+        </section>
+
+        <section id="events">
+            <h2>Sự kiện hồ bơi</h2>
+            <p>Thông tin về các sự kiện...</p>
+        </section>
+
+        <section id="customer-service">
+            <h2>Dịch vụ chăm sóc khách hàng</h2>
+            <p>Liên hệ với chúng tôi để được hỗ trợ tốt nhất.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Hồ Bơi Đà Nẵng. All rights reserved.</p>
+        </footer>
+    </body>
+    </html>

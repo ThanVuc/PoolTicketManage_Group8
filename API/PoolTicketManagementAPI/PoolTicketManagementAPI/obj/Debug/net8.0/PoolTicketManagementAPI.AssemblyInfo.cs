@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PoolTicketManagementAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb326431f1c33d95ef1fc29a5021f0920d3dfb2b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bb226d8f0438a9bada9edfb493e6882cd86e1e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("PoolTicketManagementAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PoolTicketManagementAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
