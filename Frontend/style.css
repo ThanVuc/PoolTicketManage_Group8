@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.khung-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.khung-chat-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: move;
+    border-radius: 10px 10px 0 0;
+}
+
+.khung-chat-header h2 {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.khung-chat-content {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.tin-nhan {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+}
+
+.tin-nhan p {
+    margin: 0;
+    padding: 0;
+}
+
+.khung-chat-footer {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    display: flex;
+}
+
+.khung-chat-footer input[type="text"] {
+    flex-grow: 1;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.khung-chat-footer button {
+    width: 60px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.mo-khung-chat {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0084ff;
+    color: #fff;
+    cursor: pointer;
+}

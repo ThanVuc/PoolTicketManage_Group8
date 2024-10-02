@@ -2,7 +2,9 @@ using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using PoolTicketManagementAPI.Data;
+using PoolTicketManagementAPI.DataAccess;
 using PoolTicketManagementAPI.IRepository;
+using PoolTicketManagementAPI.Models;
 using PoolTicketManagementAPI.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,7 +35,6 @@ services.AddDbContext<AppDbContext>(options => {
 
 // declare repository injection
 services.AddScoped<ITicketRepository, TicketRepository>();
-
 
 var app = builder.Build();
 

@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0499321B-6765-4F19-9887-C517619E8174}|PoolTicketManagementAPI\\PoolTicketManagementAPI.csproj|d:\\a_storage\\secondbrain\\knowledge\\computer science\\project manager\\poolticketmanage_group8\\api\\poolticketmanagementapi\\poolticketmanagementapi\\businesslogic\\ticketbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0499321B-6765-4F19-9887-C517619E8174}|PoolTicketManagementAPI\\PoolTicketManagementAPI.csproj|solutionrelative:poolticketmanagementapi\\businesslogic\\ticketbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85895546-D373-4591-BDD8-5FB30FAD2CC0}|TestProject1\\TestProject1.csproj|d:\\a_storage\\secondbrain\\knowledge\\computer science\\project manager\\poolticketmanage_group8\\api\\poolticketmanagementapi\\testproject1\\testmethod\\ticketaddtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85895546-D373-4591-BDD8-5FB30FAD2CC0}|TestProject1\\TestProject1.csproj|solutionrelative:testproject1\\testmethod\\ticketaddtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85895546-D373-4591-BDD8-5FB30FAD2CC0}|TestProject1\\TestProject1.csproj|d:\\a_storage\\secondbrain\\knowledge\\computer science\\project manager\\poolticketmanage_group8\\api\\poolticketmanagementapi\\testproject1\\testproject1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{85895546-D373-4591-BDD8-5FB30FAD2CC0}|TestProject1\\TestProject1.csproj|solutionrelative:testproject1\\testproject1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0499321B-6765-4F19-9887-C517619E8174}|PoolTicketManagementAPI\\PoolTicketManagementAPI.csproj|d:\\a_storage\\secondbrain\\knowledge\\computer science\\project manager\\poolticketmanage_group8\\api\\poolticketmanagementapi\\poolticketmanagementapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0499321B-6765-4F19-9887-C517619E8174}|PoolTicketManagementAPI\\PoolTicketManagementAPI.csproj|solutionrelative:poolticketmanagementapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 278,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +35,58 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\PoolTicketManagementAPI\\Program.cs",
+              "RelativeDocumentMoniker": "PoolTicketManagementAPI\\Program.cs",
+              "ToolTip": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\PoolTicketManagementAPI\\Program.cs",
+              "RelativeToolTip": "PoolTicketManagementAPI\\Program.cs",
+              "ViewState": "AQIAABwAAABgZWZmZmYkwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T01:40:23.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TestProject1",
+              "DocumentMoniker": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\TestProject1\\TestProject1.csproj",
+              "RelativeDocumentMoniker": "TestProject1\\TestProject1.csproj",
+              "ToolTip": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\TestProject1\\TestProject1.csproj",
+              "RelativeToolTip": "TestProject1\\TestProject1.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-02T01:40:22.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TicketBL.cs",
+              "DocumentMoniker": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\PoolTicketManagementAPI\\BusinessLogic\\TicketBL.cs",
+              "RelativeDocumentMoniker": "PoolTicketManagementAPI\\BusinessLogic\\TicketBL.cs",
+              "ToolTip": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\PoolTicketManagementAPI\\BusinessLogic\\TicketBL.cs",
+              "RelativeToolTip": "PoolTicketManagementAPI\\BusinessLogic\\TicketBL.cs",
+              "ViewState": "AQIAAAkAAABgZWZmZmY2wBMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T01:39:03.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TicketAddTest.cs",
+              "DocumentMoniker": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\TestProject1\\TestMethod\\TicketAddTest.cs",
+              "RelativeDocumentMoniker": "TestProject1\\TestMethod\\TicketAddTest.cs",
+              "ToolTip": "D:\\A_STORAGE\\SecondBrain\\KNOWLEDGE\\Computer Science\\Project Manager\\PoolTicketManage_Group8\\API\\PoolTicketManagementAPI\\TestProject1\\TestMethod\\TicketAddTest.cs",
+              "RelativeToolTip": "TestProject1\\TestMethod\\TicketAddTest.cs",
+              "ViewState": "AQIAAAkAAADgl5mZmZktwBkAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T01:34:26.674Z",
+              "EditorCaption": ""
             }
           ]
         },

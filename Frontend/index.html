@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ CSKH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="khung-chat" id="khungChat">
+        <div class="khung-chat-header">
+            <h2>CSKH</h2>
+            <span class="close-btn" onclick="dongKhungChat()">&times;</span>
+        </div>
+        <div class="khung-chat-content" id="khungChatContent">
+            <div class="tin-nhan">
+                <p>Xin chào, tôi có thể giúp gì cho bạn?</p>
+            </div>
+        </div>
+        <div class="khung-chat-footer">
+            <input type="text" id="inputTinNhan" placeholder="Nhập tin nhắn...">
+            <button onclick="guiTinNhan()">Gửi</button>
+        </div>
+    </div>
+    <button class="mo-khung-chat" id="nutMoKhungChat" onclick="moKhungChat()">Chat với CSKH</button>
+    <script src ="script.js"></script>
+</body>
+</html>
