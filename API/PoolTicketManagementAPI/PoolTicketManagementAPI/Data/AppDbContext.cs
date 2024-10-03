@@ -166,7 +166,8 @@ namespace PoolTicketManagementAPI.Data
         public DbSet<Pool> Pools {get; set;}
         public DbSet<Event> Events {get; set;}
         public DbSet<User> Users {get; set;}
-        public DbSet<Ticket> Tickets {get; set;}
+        public virtual DbSet<Ticket> Tickets {get; set;}
+
         public DbSet<Question> Questions {get; set;}
         public DbSet<EventOfPool> EventOfPools {get; set;}
         public DbSet<BusTicket> BusTickets {get; set;}

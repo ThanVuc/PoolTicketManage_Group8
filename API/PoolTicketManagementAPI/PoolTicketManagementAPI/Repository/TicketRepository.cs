@@ -20,7 +20,7 @@ namespace PoolTicketManagementAPI.Repository
             _context = appDbContext;
         }
 
-        public async Task<List<Ticket>> GetAllTicket()
+        public virtual async Task<List<Ticket>> GetAllTicket()
         {
             var tickets = await _context.Tickets.ToListAsync();
 
